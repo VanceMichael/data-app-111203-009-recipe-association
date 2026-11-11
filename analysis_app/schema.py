@@ -1,5 +1,5 @@
 FIELDS = {'observation_id': 'str', 'lot': 'str', 'plant': 'str', 'month': 'int', 'items': 'str', 'yield_rate': 'float', 'size': 'int', 'recipe_version': 'str'}
-REQUIRED = ['observation_id', 'lot', 'plant', 'yield_rate']
+REQUIRED = ['observation_id', 'lot', 'plant', 'month', 'items', 'yield_rate', 'size', 'recipe_version']
 ENTITY = 'lot'
 GROUP = 'plant'
 MEASURE = 'yield_rate'

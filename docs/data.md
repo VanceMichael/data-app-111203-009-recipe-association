@@ -9,10 +9,14 @@
 | `observation_id` | str | 必填 |
 | `lot` | str | 必填 |
 | `plant` | str | 必填 |
-| `month` | int | 允许空值，空值不是零 |
-| `items` | str | 允许空值，空值不是零 |
+| `month` | int | 必填 |
+| `items` | str | 必填 |
 | `yield_rate` | float | 必填 |
-| `size` | int | 允许空值，空值不是零 |
-| `recipe_version` | str | 允许空值，空值不是零 |
+| `size` | int | 必填 |
+| `recipe_version` | str | 必填 |
 
 时间字段 day、week、tick、hour、minute、cycle、start_day、reported_day、known_at、visible_at、opened、observed 均以各字段名所述的相对时间单位表示整数；不同字段并不必然代表同一种时间。缺少的登记码与浓度等信息保持为空。示例只表达产品数据结构，不能代替实际调查资料。
+
+## 业务字段语义
+
+items 为用分号分隔的组分名称集合，yield_rate 为 0 到 1 的良率，size 为被检件数。lot 对应一次试制，plant 为工厂，recipe_version 为配方版本；summary 的良率以 size 加权。
