@@ -1,0 +1,3104 @@
+{
+  "analysis": "discovery",
+  "bh_test_family": {
+    "boundary": "全部冻结规则在全部可检验工厂上的厂内检验；一次校正，不做事后分厂挑选",
+    "family_size": 40,
+    "fdr": 0.05,
+    "method": "Benjamini-Hochberg"
+  },
+  "interpretation": "结果为相关性复验线索，不构成因果结论，不构成配方更换建议；规则在发现期按支持度筛选并冻结，验证期仅在同厂批次内比较加权良率。",
+  "mining": {
+    "candidate_budget": 500,
+    "candidate_sets_evaluated": 37,
+    "elimination_reason_counts": {
+      "below_min_support": 19,
+      "order_cap": 1
+    },
+    "eliminations": [
+      {
+        "itemset": [
+          "L01"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L02"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L03"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L04"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L05"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L06"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L07"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L08"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L09"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L10"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L11"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L12"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L13"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L14"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L15"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "L16"
+        ],
+        "order": 1,
+        "reason": "below_min_support",
+        "support_lots": 3
+      },
+      {
+        "itemset": [
+          "fiber",
+          "pilot"
+        ],
+        "order": 2,
+        "reason": "below_min_support",
+        "support_lots": 1
+      },
+      {
+        "itemset": null,
+        "order": 3,
+        "reason": "order_cap",
+        "support_lots": null
+      },
+      {
+        "itemset": [
+          "binder",
+          "filler",
+          "pilot"
+        ],
+        "order": 3,
+        "reason": "below_min_support",
+        "support_lots": 2
+      },
+      {
+        "itemset": [
+          "coating",
+          "filler",
+          "pilot"
+        ],
+        "order": 3,
+        "reason": "below_min_support",
+        "support_lots": 3
+      }
+    ],
+    "max_order_reached": 3,
+    "transactions_scanned": 195,
+    "truncated_by_budget": false
+  },
+  "novel_items_in_validation": [
+    {
+      "item": "novel_a",
+      "validation_support_lots": 32
+    },
+    {
+      "item": "novel_b",
+      "validation_support_lots": 11
+    }
+  ],
+  "parameters": {
+    "fdr": 0.05,
+    "max_candidate_sets": 500,
+    "max_order": 3,
+    "min_lots_per_group": 5,
+    "min_support_lots": 5,
+    "split_month": 8,
+    "support_basis": "发现期去重后的 lot 事务计数；size 不参与支持度",
+    "weight_basis": "size 仅作为验证期良率均值的权重"
+  },
+  "periods": {
+    "all_source_rows": 297,
+    "all_transactions": 291,
+    "discovery": {
+      "distinct_items": 22,
+      "merged_from_rows": 198,
+      "month_range": [
+        0,
+        7
+      ],
+      "per_plant": {
+        "P0": {
+          "merged_from_rows": 66,
+          "transactions": 65
+        },
+        "P1": {
+          "merged_from_rows": 66,
+          "transactions": 65
+        },
+        "P2": {
+          "merged_from_rows": 66,
+          "transactions": 65
+        }
+      },
+      "transactions": 195
+    },
+    "split_rule": "发现期 month < 8；验证期 month >= 8",
+    "validation": {
+      "distinct_items": 7,
+      "merged_from_rows": 99,
+      "month_range": [
+        8,
+        11
+      ],
+      "per_plant": {
+        "P0": {
+          "merged_from_rows": 33,
+          "transactions": 32
+        },
+        "P1": {
+          "merged_from_rows": 33,
+          "transactions": 32
+        },
+        "P2": {
+          "merged_from_rows": 33,
+          "transactions": 32
+        }
+      },
+      "transactions": 96
+    }
+  },
+  "product": "recipe-association",
+  "rule_verdict_counts": {
+    "cooccurrence_only": 15,
+    "eliminated_validation_empty": 9,
+    "not_validated": 2,
+    "validated_association": 8
+  },
+  "rules": [
+    {
+      "discovery_support_lots": 195,
+      "discovery_support_rate": 1.0,
+      "itemset": [
+        "base"
+      ],
+      "order": 1,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 0,
+          "absent_weighted_yield": null,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 32,
+          "present_weighted_yield": 0.8341682819194958,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 0,
+          "absent_weighted_yield": null,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 32,
+          "present_weighted_yield": 0.7697445090763609,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 0,
+          "absent_weighted_yield": null,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 32,
+          "present_weighted_yield": 0.6722582402650944,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 0,
+        "absent_weighted_yield": null,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 96,
+        "present_weighted_yield": 0.7597237585336392
+      },
+      "rule_id": "Rbase",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 96,
+      "validation_support_rate": 1.0,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "命中组或未命中组批次少于 5，厂内条件关联不可检验"
+      ]
+    },
+    {
+      "discovery_support_lots": 82,
+      "discovery_support_rate": 0.4205128205128205,
+      "itemset": [
+        "binder"
+      ],
+      "order": 1,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 12,
+          "absent_weighted_yield": 0.8163543310180642,
+          "bh_adj_p_value": 3.076014383090344e-34,
+          "bh_significant": true,
+          "effect": 0.029878052303985214,
+          "p_value": 1.6149075511224305e-34,
+          "present_lots": 20,
+          "present_weighted_yield": 0.8462323833220494,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 12.253202340169196,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 17,
+          "absent_weighted_yield": 0.765767643984745,
+          "bh_adj_p_value": 0.004369617876910839,
+          "bh_significant": true,
+          "effect": 0.00863615082025515,
+          "p_value": 0.004041896536142526,
+          "present_lots": 15,
+          "present_weighted_yield": 0.7744037948050001,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 2.8748733017775434,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 21,
+          "absent_weighted_yield": 0.6664030831174134,
+          "bh_adj_p_value": 3.8020325983465e-16,
+          "bh_significant": true,
+          "effect": 0.01877849204734361,
+          "p_value": 2.471321188925225e-16,
+          "present_lots": 11,
+          "present_weighted_yield": 0.685181575164757,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 8.196672709038813,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 50,
+        "absent_weighted_yield": 0.7365514522238266,
+        "effect": 0.0505385035239605,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 46,
+        "present_weighted_yield": 0.7870899557477871
+      },
+      "rule_id": "Rbinder",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 3,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 46,
+      "validation_support_rate": 0.4791666666666667,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向且 BH 校正后显著，可作为复验候选线索"
+      ]
+    },
+    {
+      "discovery_support_lots": 77,
+      "discovery_support_rate": 0.39487179487179486,
+      "itemset": [
+        "coating"
+      ],
+      "order": 1,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 17,
+          "absent_weighted_yield": 0.8145625764613793,
+          "bh_adj_p_value": 1.1004764140349292e-83,
+          "bh_significant": true,
+          "effect": 0.044282753394732643,
+          "p_value": 3.026310138596055e-84,
+          "present_lots": 15,
+          "present_weighted_yield": 0.858845329856112,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 19.448066127983193,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 16,
+          "absent_weighted_yield": 0.7613700920072414,
+          "bh_adj_p_value": 3.746895064590832e-09,
+          "bh_significant": true,
+          "effect": 0.017217989156117053,
+          "p_value": 2.9975160516726653e-09,
+          "present_lots": 16,
+          "present_weighted_yield": 0.7785880811633584,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 5.931734200300024,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 23,
+          "absent_weighted_yield": 0.6645581701274658,
+          "bh_adj_p_value": 7.332782663594834e-48,
+          "bh_significant": true,
+          "effect": 0.03009007990675261,
+          "p_value": 2.749793498848063e-48,
+          "present_lots": 9,
+          "present_weighted_yield": 0.6946482500342184,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 14.601439010447098,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 56,
+        "absent_weighted_yield": 0.7386605004715836,
+        "effect": 0.05357882061414143,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 40,
+        "present_weighted_yield": 0.792239321085725
+      },
+      "rule_id": "Rcoating",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 3,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 40,
+      "validation_support_rate": 0.4166666666666667,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向且 BH 校正后显著，可作为复验候选线索"
+      ]
+    },
+    {
+      "discovery_support_lots": 34,
+      "discovery_support_rate": 0.17435897435897435,
+      "itemset": [
+        "fiber"
+      ],
+      "order": 1,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 0,
+          "absent_weighted_yield": null,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 32,
+          "present_weighted_yield": 0.8341682819194958,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 64,
+        "absent_weighted_yield": 0.7187526660659195,
+        "effect": 0.11541561585357629,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 32,
+        "present_weighted_yield": 0.8341682819194958
+      },
+      "rule_id": "Rfiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 32,
+      "validation_support_rate": 0.3333333333333333,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "规则在验证期仅出现于一座工厂，无同厂可比样本"
+      ]
+    },
+    {
+      "discovery_support_lots": 76,
+      "discovery_support_rate": 0.38974358974358975,
+      "itemset": [
+        "filler"
+      ],
+      "order": 1,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 9,
+          "absent_weighted_yield": 0.8731604158724864,
+          "bh_adj_p_value": 1.061440267127934e-168,
+          "bh_significant": true,
+          "effect": -0.05597684314946272,
+          "p_value": 1.061440267127934e-169,
+          "present_lots": 23,
+          "present_weighted_yield": 0.8171835727230237,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -27.767833606481894,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 24,
+          "absent_weighted_yield": 0.7798591978585611,
+          "bh_adj_p_value": 1.3049663259801607e-51,
+          "bh_significant": true,
+          "effect": -0.05800141848542828,
+          "p_value": 4.241140559435522e-52,
+          "present_lots": 8,
+          "present_weighted_yield": 0.7218577793731328,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -15.188087490330883,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 27,
+          "absent_weighted_yield": 0.6765994764978078,
+          "bh_adj_p_value": 8.48314327029756e-14,
+          "bh_significant": true,
+          "effect": -0.03092650590561319,
+          "p_value": 6.36235745272317e-14,
+          "present_lots": 5,
+          "present_weighted_yield": 0.6456729705921946,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -7.500399598522162,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 60,
+        "absent_weighted_yield": 0.7493271630340835,
+        "effect": 0.029851115357327984,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 36,
+        "present_weighted_yield": 0.7791782783914115
+      },
+      "rule_id": "Rfiller",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 3,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 36,
+      "validation_support_rate": 0.375,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向负关联且 BH 校正后显著，可作为复验候选线索",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 19,
+      "discovery_support_rate": 0.09743589743589744,
+      "itemset": [
+        "pilot"
+      ],
+      "order": 1,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rpilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 82,
+      "discovery_support_rate": 0.4205128205128205,
+      "itemset": [
+        "base",
+        "binder"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 12,
+          "absent_weighted_yield": 0.8163543310180642,
+          "bh_adj_p_value": 3.076014383090344e-34,
+          "bh_significant": true,
+          "effect": 0.029878052303985214,
+          "p_value": 1.6149075511224305e-34,
+          "present_lots": 20,
+          "present_weighted_yield": 0.8462323833220494,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 12.253202340169196,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 17,
+          "absent_weighted_yield": 0.765767643984745,
+          "bh_adj_p_value": 0.004369617876910839,
+          "bh_significant": true,
+          "effect": 0.00863615082025515,
+          "p_value": 0.004041896536142526,
+          "present_lots": 15,
+          "present_weighted_yield": 0.7744037948050001,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 2.8748733017775434,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 21,
+          "absent_weighted_yield": 0.6664030831174134,
+          "bh_adj_p_value": 3.8020325983465e-16,
+          "bh_significant": true,
+          "effect": 0.01877849204734361,
+          "p_value": 2.471321188925225e-16,
+          "present_lots": 11,
+          "present_weighted_yield": 0.685181575164757,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 8.196672709038813,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 50,
+        "absent_weighted_yield": 0.7365514522238266,
+        "effect": 0.0505385035239605,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 46,
+        "present_weighted_yield": 0.7870899557477871
+      },
+      "rule_id": "Rbase|binder",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 3,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 46,
+      "validation_support_rate": 0.4791666666666667,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向且 BH 校正后显著，可作为复验候选线索"
+      ]
+    },
+    {
+      "discovery_support_lots": 77,
+      "discovery_support_rate": 0.39487179487179486,
+      "itemset": [
+        "base",
+        "coating"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 17,
+          "absent_weighted_yield": 0.8145625764613793,
+          "bh_adj_p_value": 1.1004764140349292e-83,
+          "bh_significant": true,
+          "effect": 0.044282753394732643,
+          "p_value": 3.026310138596055e-84,
+          "present_lots": 15,
+          "present_weighted_yield": 0.858845329856112,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 19.448066127983193,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 16,
+          "absent_weighted_yield": 0.7613700920072414,
+          "bh_adj_p_value": 3.746895064590832e-09,
+          "bh_significant": true,
+          "effect": 0.017217989156117053,
+          "p_value": 2.9975160516726653e-09,
+          "present_lots": 16,
+          "present_weighted_yield": 0.7785880811633584,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 5.931734200300024,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 23,
+          "absent_weighted_yield": 0.6645581701274658,
+          "bh_adj_p_value": 7.332782663594834e-48,
+          "bh_significant": true,
+          "effect": 0.03009007990675261,
+          "p_value": 2.749793498848063e-48,
+          "present_lots": 9,
+          "present_weighted_yield": 0.6946482500342184,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 14.601439010447098,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 56,
+        "absent_weighted_yield": 0.7386605004715836,
+        "effect": 0.05357882061414143,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 40,
+        "present_weighted_yield": 0.792239321085725
+      },
+      "rule_id": "Rbase|coating",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 3,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 40,
+      "validation_support_rate": 0.4166666666666667,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向且 BH 校正后显著，可作为复验候选线索"
+      ]
+    },
+    {
+      "discovery_support_lots": 34,
+      "discovery_support_rate": 0.17435897435897435,
+      "itemset": [
+        "base",
+        "fiber"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 0,
+          "absent_weighted_yield": null,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 32,
+          "present_weighted_yield": 0.8341682819194958,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 64,
+        "absent_weighted_yield": 0.7187526660659195,
+        "effect": 0.11541561585357629,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 32,
+        "present_weighted_yield": 0.8341682819194958
+      },
+      "rule_id": "Rbase|fiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 32,
+      "validation_support_rate": 0.3333333333333333,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "规则在验证期仅出现于一座工厂，无同厂可比样本"
+      ]
+    },
+    {
+      "discovery_support_lots": 76,
+      "discovery_support_rate": 0.38974358974358975,
+      "itemset": [
+        "base",
+        "filler"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 9,
+          "absent_weighted_yield": 0.8731604158724864,
+          "bh_adj_p_value": 1.061440267127934e-168,
+          "bh_significant": true,
+          "effect": -0.05597684314946272,
+          "p_value": 1.061440267127934e-169,
+          "present_lots": 23,
+          "present_weighted_yield": 0.8171835727230237,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -27.767833606481894,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 24,
+          "absent_weighted_yield": 0.7798591978585611,
+          "bh_adj_p_value": 1.3049663259801607e-51,
+          "bh_significant": true,
+          "effect": -0.05800141848542828,
+          "p_value": 4.241140559435522e-52,
+          "present_lots": 8,
+          "present_weighted_yield": 0.7218577793731328,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -15.188087490330883,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 27,
+          "absent_weighted_yield": 0.6765994764978078,
+          "bh_adj_p_value": 8.48314327029756e-14,
+          "bh_significant": true,
+          "effect": -0.03092650590561319,
+          "p_value": 6.36235745272317e-14,
+          "present_lots": 5,
+          "present_weighted_yield": 0.6456729705921946,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -7.500399598522162,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 60,
+        "absent_weighted_yield": 0.7493271630340835,
+        "effect": 0.029851115357327984,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 36,
+        "present_weighted_yield": 0.7791782783914115
+      },
+      "rule_id": "Rbase|filler",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 3,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 36,
+      "validation_support_rate": 0.375,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向负关联且 BH 校正后显著，可作为复验候选线索",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 19,
+      "discovery_support_rate": 0.09743589743589744,
+      "itemset": [
+        "base",
+        "pilot"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rbase|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 62,
+      "discovery_support_rate": 0.31794871794871793,
+      "itemset": [
+        "binder",
+        "coating"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 19,
+          "absent_weighted_yield": 0.8139744342863651,
+          "bh_adj_p_value": 2.9380927773225975e-141,
+          "bh_significant": true,
+          "effect": 0.05328407771109589,
+          "p_value": 5.141662360314546e-142,
+          "present_lots": 13,
+          "present_weighted_yield": 0.867258511997461,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 25.37198149507711,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 21,
+          "absent_weighted_yield": 0.7612252172974241,
+          "bh_adj_p_value": 8.248109591069652e-15,
+          "bh_significant": true,
+          "effect": 0.024716048085927644,
+          "p_value": 5.7736767137487555e-15,
+          "present_lots": 11,
+          "present_weighted_yield": 0.7859412653833517,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 7.808796209108468,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 26,
+          "absent_weighted_yield": 0.6662362887071601,
+          "bh_adj_p_value": 7.257102875156217e-47,
+          "bh_significant": true,
+          "effect": 0.03538445988421224,
+          "p_value": 3.0842687219413924e-47,
+          "present_lots": 6,
+          "present_weighted_yield": 0.7016207485913724,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 14.435715817684589,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 66,
+        "absent_weighted_yield": 0.7399078942155654,
+        "effect": 0.06649880768343741,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 30,
+        "present_weighted_yield": 0.8064067018990028
+      },
+      "rule_id": "Rbinder|coating",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 3,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 30,
+      "validation_support_rate": 0.3125,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向且 BH 校正后显著，可作为复验候选线索"
+      ]
+    },
+    {
+      "discovery_support_lots": 12,
+      "discovery_support_rate": 0.06153846153846154,
+      "itemset": [
+        "binder",
+        "fiber"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 12,
+          "absent_weighted_yield": 0.8163543310180642,
+          "bh_adj_p_value": 3.076014383090344e-34,
+          "bh_significant": true,
+          "effect": 0.029878052303985214,
+          "p_value": 1.6149075511224305e-34,
+          "present_lots": 20,
+          "present_weighted_yield": 0.8462323833220494,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 12.253202340169196,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 76,
+        "absent_weighted_yield": 0.7364984233299458,
+        "effect": 0.10973395999210367,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 20,
+        "present_weighted_yield": 0.8462323833220494
+      },
+      "rule_id": "Rbinder|fiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 20,
+      "validation_support_rate": 0.20833333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 27,
+      "discovery_support_rate": 0.13846153846153847,
+      "itemset": [
+        "binder",
+        "filler"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 18,
+          "absent_weighted_yield": 0.8367385758791673,
+          "bh_adj_p_value": 0.015249020435762572,
+          "bh_significant": true,
+          "effect": -0.006310257924178941,
+          "p_value": 0.015249020435762574,
+          "present_lots": 14,
+          "present_weighted_yield": 0.8304283179549884,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -2.42641027598919,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 28,
+          "absent_weighted_yield": 0.773224130633828,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 4,
+          "present_weighted_yield": 0.7372517049552254,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 30,
+          "absent_weighted_yield": 0.6714753197856371,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 2,
+          "present_weighted_yield": 0.687635601477,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 76,
+        "absent_weighted_yield": 0.7493736191907654,
+        "effect": 0.05427567576284997,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 20,
+        "present_weighted_yield": 0.8036492949536154
+      },
+      "rule_id": "Rbinder|filler",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 20,
+      "validation_support_rate": 0.20833333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 7,
+      "discovery_support_rate": 0.035897435897435895,
+      "itemset": [
+        "binder",
+        "pilot"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rbinder|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 12,
+      "discovery_support_rate": 0.06153846153846154,
+      "itemset": [
+        "coating",
+        "fiber"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 17,
+          "absent_weighted_yield": 0.8145625764613793,
+          "bh_adj_p_value": 1.1004764140349292e-83,
+          "bh_significant": true,
+          "effect": 0.044282753394732643,
+          "p_value": 3.026310138596055e-84,
+          "present_lots": 15,
+          "present_weighted_yield": 0.858845329856112,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 19.448066127983193,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 81,
+        "absent_weighted_yield": 0.7412401239011541,
+        "effect": 0.11760520595495783,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 15,
+        "present_weighted_yield": 0.858845329856112
+      },
+      "rule_id": "Rcoating|fiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 15,
+      "validation_support_rate": 0.15625,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 29,
+      "discovery_support_rate": 0.14871794871794872,
+      "itemset": [
+        "coating",
+        "filler"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 22,
+          "absent_weighted_yield": 0.8314976600511224,
+          "bh_adj_p_value": 0.00028302499889138675,
+          "bh_significant": true,
+          "effect": 0.009347176539307278,
+          "p_value": 0.0002476468740299634,
+          "present_lots": 10,
+          "present_weighted_yield": 0.8408448365904296,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 3.6646811857639743,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 27,
+          "absent_weighted_yield": 0.774955795823113,
+          "bh_adj_p_value": 1.835180463617854e-20,
+          "bh_significant": true,
+          "effect": -0.043466869001317576,
+          "p_value": 1.055228766580266e-20,
+          "present_lots": 5,
+          "present_weighted_yield": 0.7314889268217954,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -9.330348990242808,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 30,
+          "absent_weighted_yield": 0.6714753197856371,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 2,
+          "present_weighted_yield": 0.687635601477,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 79,
+        "absent_weighted_yield": 0.7526165708420715,
+        "effect": 0.04595596160455451,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 17,
+        "present_weighted_yield": 0.798572532446626
+      },
+      "rule_id": "Rcoating|filler",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 17,
+      "validation_support_rate": 0.17708333333333334,
+      "verdict": "not_validated",
+      "verdict_reasons": [
+        "显著工厂的效应方向不一致，稳定性不足",
+        "无同厂可比样本的工厂：P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 9,
+      "discovery_support_rate": 0.046153846153846156,
+      "itemset": [
+        "coating",
+        "pilot"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rcoating|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 23,
+      "discovery_support_rate": 0.11794871794871795,
+      "itemset": [
+        "fiber",
+        "filler"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 9,
+          "absent_weighted_yield": 0.8731604158724864,
+          "bh_adj_p_value": 1.061440267127934e-168,
+          "bh_significant": true,
+          "effect": -0.05597684314946272,
+          "p_value": 1.061440267127934e-169,
+          "present_lots": 23,
+          "present_weighted_yield": 0.8171835727230237,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -27.767833606481894,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 73,
+        "absent_weighted_yield": 0.740847761667416,
+        "effect": 0.07633581105560772,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 23,
+        "present_weighted_yield": 0.8171835727230237
+      },
+      "rule_id": "Rfiber|filler",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 23,
+      "validation_support_rate": 0.23958333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 9,
+      "discovery_support_rate": 0.046153846153846156,
+      "itemset": [
+        "filler",
+        "pilot"
+      ],
+      "order": 2,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rfiller|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 62,
+      "discovery_support_rate": 0.31794871794871793,
+      "itemset": [
+        "base",
+        "binder",
+        "coating"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 19,
+          "absent_weighted_yield": 0.8139744342863651,
+          "bh_adj_p_value": 2.9380927773225975e-141,
+          "bh_significant": true,
+          "effect": 0.05328407771109589,
+          "p_value": 5.141662360314546e-142,
+          "present_lots": 13,
+          "present_weighted_yield": 0.867258511997461,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 25.37198149507711,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 21,
+          "absent_weighted_yield": 0.7612252172974241,
+          "bh_adj_p_value": 8.248109591069652e-15,
+          "bh_significant": true,
+          "effect": 0.024716048085927644,
+          "p_value": 5.7736767137487555e-15,
+          "present_lots": 11,
+          "present_weighted_yield": 0.7859412653833517,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 7.808796209108468,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 26,
+          "absent_weighted_yield": 0.6662362887071601,
+          "bh_adj_p_value": 7.257102875156217e-47,
+          "bh_significant": true,
+          "effect": 0.03538445988421224,
+          "p_value": 3.0842687219413924e-47,
+          "present_lots": 6,
+          "present_weighted_yield": 0.7016207485913724,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 14.435715817684589,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 66,
+        "absent_weighted_yield": 0.7399078942155654,
+        "effect": 0.06649880768343741,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 30,
+        "present_weighted_yield": 0.8064067018990028
+      },
+      "rule_id": "Rbase|binder|coating",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 3,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 30,
+      "validation_support_rate": 0.3125,
+      "verdict": "validated_association",
+      "verdict_reasons": [
+        "多厂同方向且 BH 校正后显著，可作为复验候选线索"
+      ]
+    },
+    {
+      "discovery_support_lots": 12,
+      "discovery_support_rate": 0.06153846153846154,
+      "itemset": [
+        "base",
+        "binder",
+        "fiber"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 12,
+          "absent_weighted_yield": 0.8163543310180642,
+          "bh_adj_p_value": 3.076014383090344e-34,
+          "bh_significant": true,
+          "effect": 0.029878052303985214,
+          "p_value": 1.6149075511224305e-34,
+          "present_lots": 20,
+          "present_weighted_yield": 0.8462323833220494,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 12.253202340169196,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 76,
+        "absent_weighted_yield": 0.7364984233299458,
+        "effect": 0.10973395999210367,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 20,
+        "present_weighted_yield": 0.8462323833220494
+      },
+      "rule_id": "Rbase|binder|fiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 20,
+      "validation_support_rate": 0.20833333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 27,
+      "discovery_support_rate": 0.13846153846153847,
+      "itemset": [
+        "base",
+        "binder",
+        "filler"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 18,
+          "absent_weighted_yield": 0.8367385758791673,
+          "bh_adj_p_value": 0.015249020435762572,
+          "bh_significant": true,
+          "effect": -0.006310257924178941,
+          "p_value": 0.015249020435762574,
+          "present_lots": 14,
+          "present_weighted_yield": 0.8304283179549884,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -2.42641027598919,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 28,
+          "absent_weighted_yield": 0.773224130633828,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 4,
+          "present_weighted_yield": 0.7372517049552254,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 30,
+          "absent_weighted_yield": 0.6714753197856371,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 2,
+          "present_weighted_yield": 0.687635601477,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 76,
+        "absent_weighted_yield": 0.7493736191907654,
+        "effect": 0.05427567576284997,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 20,
+        "present_weighted_yield": 0.8036492949536154
+      },
+      "rule_id": "Rbase|binder|filler",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 20,
+      "validation_support_rate": 0.20833333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 7,
+      "discovery_support_rate": 0.035897435897435895,
+      "itemset": [
+        "base",
+        "binder",
+        "pilot"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rbase|binder|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 12,
+      "discovery_support_rate": 0.06153846153846154,
+      "itemset": [
+        "base",
+        "coating",
+        "fiber"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 17,
+          "absent_weighted_yield": 0.8145625764613793,
+          "bh_adj_p_value": 1.1004764140349292e-83,
+          "bh_significant": true,
+          "effect": 0.044282753394732643,
+          "p_value": 3.026310138596055e-84,
+          "present_lots": 15,
+          "present_weighted_yield": 0.858845329856112,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 19.448066127983193,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 81,
+        "absent_weighted_yield": 0.7412401239011541,
+        "effect": 0.11760520595495783,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 15,
+        "present_weighted_yield": 0.858845329856112
+      },
+      "rule_id": "Rbase|coating|fiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 15,
+      "validation_support_rate": 0.15625,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 29,
+      "discovery_support_rate": 0.14871794871794872,
+      "itemset": [
+        "base",
+        "coating",
+        "filler"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 22,
+          "absent_weighted_yield": 0.8314976600511224,
+          "bh_adj_p_value": 0.00028302499889138675,
+          "bh_significant": true,
+          "effect": 0.009347176539307278,
+          "p_value": 0.0002476468740299634,
+          "present_lots": 10,
+          "present_weighted_yield": 0.8408448365904296,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 3.6646811857639743,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 27,
+          "absent_weighted_yield": 0.774955795823113,
+          "bh_adj_p_value": 1.835180463617854e-20,
+          "bh_significant": true,
+          "effect": -0.043466869001317576,
+          "p_value": 1.055228766580266e-20,
+          "present_lots": 5,
+          "present_weighted_yield": 0.7314889268217954,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -9.330348990242808,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 30,
+          "absent_weighted_yield": 0.6714753197856371,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 2,
+          "present_weighted_yield": 0.687635601477,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 79,
+        "absent_weighted_yield": 0.7526165708420715,
+        "effect": 0.04595596160455451,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 17,
+        "present_weighted_yield": 0.798572532446626
+      },
+      "rule_id": "Rbase|coating|filler",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0",
+          "P1"
+        ],
+        "testable_plants": [
+          "P0",
+          "P1"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 17,
+      "validation_support_rate": 0.17708333333333334,
+      "verdict": "not_validated",
+      "verdict_reasons": [
+        "显著工厂的效应方向不一致，稳定性不足",
+        "无同厂可比样本的工厂：P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 9,
+      "discovery_support_rate": 0.046153846153846156,
+      "itemset": [
+        "base",
+        "coating",
+        "pilot"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rbase|coating|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 23,
+      "discovery_support_rate": 0.11794871794871795,
+      "itemset": [
+        "base",
+        "fiber",
+        "filler"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 9,
+          "absent_weighted_yield": 0.8731604158724864,
+          "bh_adj_p_value": 1.061440267127934e-168,
+          "bh_significant": true,
+          "effect": -0.05597684314946272,
+          "p_value": 1.061440267127934e-169,
+          "present_lots": 23,
+          "present_weighted_yield": 0.8171835727230237,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -27.767833606481894,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 73,
+        "absent_weighted_yield": 0.740847761667416,
+        "effect": 0.07633581105560772,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 23,
+        "present_weighted_yield": 0.8171835727230237
+      },
+      "rule_id": "Rbase|fiber|filler",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 23,
+      "validation_support_rate": 0.23958333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 9,
+      "discovery_support_rate": 0.046153846153846156,
+      "itemset": [
+        "base",
+        "filler",
+        "pilot"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rbase|filler|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 10,
+      "discovery_support_rate": 0.05128205128205128,
+      "itemset": [
+        "binder",
+        "coating",
+        "fiber"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 19,
+          "absent_weighted_yield": 0.8139744342863651,
+          "bh_adj_p_value": 2.9380927773225975e-141,
+          "bh_significant": true,
+          "effect": 0.05328407771109589,
+          "p_value": 5.141662360314546e-142,
+          "present_lots": 13,
+          "present_weighted_yield": 0.867258511997461,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 25.37198149507711,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 83,
+        "absent_weighted_yield": 0.743007702426188,
+        "effect": 0.12425080957127299,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 13,
+        "present_weighted_yield": 0.867258511997461
+      },
+      "rule_id": "Rbinder|coating|fiber",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 13,
+      "validation_support_rate": 0.13541666666666666,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 21,
+      "discovery_support_rate": 0.1076923076923077,
+      "itemset": [
+        "binder",
+        "coating",
+        "filler"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 24,
+          "absent_weighted_yield": 0.8296405169587041,
+          "bh_adj_p_value": 3.2889121690440305e-16,
+          "bh_significant": true,
+          "effect": 0.020399026179737434,
+          "p_value": 1.9733473014264183e-16,
+          "present_lots": 8,
+          "present_weighted_yield": 0.8500395431384415,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 8.22369062212071,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 28,
+          "absent_weighted_yield": 0.773224130633828,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 4,
+          "present_weighted_yield": 0.7372517049552254,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 30,
+          "absent_weighted_yield": 0.6714753197856371,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 2,
+          "present_weighted_yield": 0.687635601477,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 82,
+        "absent_weighted_yield": 0.7537024876637031,
+        "effect": 0.048210578173380814,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 14,
+        "present_weighted_yield": 0.8019130658370839
+      },
+      "rule_id": "Rbinder|coating|filler",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0",
+          "P1",
+          "P2"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_support_lots": 14,
+      "validation_support_rate": 0.14583333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    },
+    {
+      "discovery_support_lots": 6,
+      "discovery_support_rate": 0.03076923076923077,
+      "itemset": [
+        "binder",
+        "coating",
+        "pilot"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.8341682819194958,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 96,
+        "absent_weighted_yield": 0.7597237585336392,
+        "effect": null,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 0,
+        "present_weighted_yield": null
+      },
+      "rule_id": "Rbinder|coating|pilot",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": false,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 0,
+        "presence_plants": [],
+        "significant_plants": [],
+        "testable_plants": []
+      },
+      "validation_presence_plants": [],
+      "validation_support_lots": 0,
+      "validation_support_rate": 0.0,
+      "verdict": "eliminated_validation_empty",
+      "verdict_reasons": [
+        "验证期无命中批次，规则无法复验"
+      ]
+    },
+    {
+      "discovery_support_lots": 5,
+      "discovery_support_rate": 0.02564102564102564,
+      "itemset": [
+        "binder",
+        "fiber",
+        "filler"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 18,
+          "absent_weighted_yield": 0.8367385758791673,
+          "bh_adj_p_value": 0.015249020435762572,
+          "bh_significant": true,
+          "effect": -0.006310257924178941,
+          "p_value": 0.015249020435762574,
+          "present_lots": 14,
+          "present_weighted_yield": 0.8304283179549884,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": -2.42641027598919,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 82,
+        "absent_weighted_yield": 0.747772228401172,
+        "effect": 0.08265608955381643,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 14,
+        "present_weighted_yield": 0.8304283179549884
+      },
+      "rule_id": "Rbinder|fiber|filler",
+      "simpson_conflict": true,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 1,
+        "positive_effect_plants": 0,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 14,
+      "validation_support_rate": 0.14583333333333334,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2",
+        "总体正相关而各厂负相关（辛普森式冲突），以厂内结果为准"
+      ]
+    },
+    {
+      "discovery_support_lots": 6,
+      "discovery_support_rate": 0.03076923076923077,
+      "itemset": [
+        "coating",
+        "fiber",
+        "filler"
+      ],
+      "order": 3,
+      "plant_results": {
+        "P0": {
+          "absent_lots": 22,
+          "absent_weighted_yield": 0.8314976600511224,
+          "bh_adj_p_value": 0.00028302499889138675,
+          "bh_significant": true,
+          "effect": 0.009347176539307278,
+          "p_value": 0.0002476468740299634,
+          "present_lots": 10,
+          "present_weighted_yield": 0.8408448365904296,
+          "testable": true,
+          "validation_lots_in_plant": 32,
+          "z_score": 3.6646811857639743,
+          "zero_variance": false
+        },
+        "P1": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.7697445090763609,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        },
+        "P2": {
+          "absent_lots": 32,
+          "absent_weighted_yield": 0.6722582402650944,
+          "effect": null,
+          "p_value": null,
+          "present_lots": 0,
+          "present_weighted_yield": null,
+          "testable": false,
+          "validation_lots_in_plant": 32,
+          "z_score": null,
+          "zero_variance": false
+        }
+      },
+      "pooled_validation": {
+        "absent_lots": 86,
+        "absent_weighted_yield": 0.7505673681932739,
+        "effect": 0.09027746839715578,
+        "note": "跨厂合并口径，可能受工厂构成混杂；显著性以厂内检验为准",
+        "present_lots": 10,
+        "present_weighted_yield": 0.8408448365904296
+      },
+      "rule_id": "Rcoating|fiber|filler",
+      "simpson_conflict": false,
+      "stability": {
+        "direction_consistent": true,
+        "negative_effect_plants": 0,
+        "positive_effect_plants": 1,
+        "presence_plants": [
+          "P0"
+        ],
+        "significant_plants": [
+          "P0"
+        ],
+        "testable_plants": [
+          "P0"
+        ]
+      },
+      "validation_presence_plants": [
+        "P0"
+      ],
+      "validation_support_lots": 10,
+      "validation_support_rate": 0.10416666666666667,
+      "verdict": "cooccurrence_only",
+      "verdict_reasons": [
+        "仅一座工厂具备同厂可比样本，跨厂覆盖不足，不能把工厂优势表述为组分协同",
+        "无同厂可比样本的工厂：P1,P2"
+      ]
+    }
+  ],
+  "schema_version": 1
+}
